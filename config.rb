@@ -45,8 +45,7 @@ page '/*.txt', layout: false
 #   activate :minify_javascript
 # end
 #
-activate :deploy do |deploy|
-  deploy.deploy_method = :git
-  deploy.remote = "github-pages"
-  deploy.branch = "master"
+
+activate :gh_pages do |gh_pages|
+  gh_pages.remote = "git@github.com:hackberryco/middleman-website.git"
 end
