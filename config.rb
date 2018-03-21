@@ -44,3 +44,9 @@ page '/*.txt', layout: false
 #   activate :minify_css
 #   activate :minify_javascript
 # end
+#
+activate :deploy do |deploy|
+  deploy.method = :git
+  deploy.remote = "github-pages"
+  deploy.branch = "master"
+end
