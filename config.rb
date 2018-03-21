@@ -46,7 +46,7 @@ page '/*.txt', layout: false
 # end
 #
 activate :deploy do |deploy|
-  deploy.method = :git
+  deploy.deploy_method = :git
   deploy.remote = "github-pages"
   deploy.branch = "master"
 end
