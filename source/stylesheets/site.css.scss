@@ -13,3 +13,13 @@ body {
   width: 800px;
   margin: 0 auto;
 }
+
+dl.toggle-questions {
+  dt {
+    margin-bottom: 10px;
+  }
+
+  dd {
+    display: none;
+  }
+}
