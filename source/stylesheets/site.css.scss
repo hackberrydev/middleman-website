@@ -14,12 +14,22 @@ body {
   margin: 0 auto;
 }
 
+
+.content-block {
+  margin-top: 60px;
+}
+
 dl.toggle-questions {
   dt {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    font-size: 20px;
+    display: list-item;
+    list-style-type: disc;
   }
 
   dd {
     display: none;
+    margin-left: 0;
+    margin-bottom: 20px;
   }
 }
