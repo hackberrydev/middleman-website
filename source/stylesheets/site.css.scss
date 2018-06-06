@@ -3,6 +3,22 @@
 
 @import url("https://fonts.googleapis.com/css?family=Inconsolata");
 
+.mt-1 {
+  margin-top: 1em;
+}
+
+.mb-1 {
+  margin-bottom: 1em;
+}
+
+.mt-2 {
+  margin-top: 2em;
+}
+
+.mb-2 {
+  margin-bottom: 2em;
+}
+
 body {
   font-family: "Inconsolata", monospace;
   font-size: 1.3em;
@@ -37,6 +53,10 @@ dl.toggle-questions {
     margin-bottom: 15px;
     display: list-item;
     list-style-type: disc;
+  }
+
+  dt:hover {
+    cursor: pointer;
   }
 
   dd {
