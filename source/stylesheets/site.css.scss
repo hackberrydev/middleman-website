@@ -5,6 +5,7 @@
 
 body {
   font-family: "Inconsolata", monospace;
+  font-size: 1.3em;
   color: $nord3;
   background-color: $nord6;
 }
@@ -26,7 +27,6 @@ body {
 dl.toggle-questions {
   dt {
     margin-bottom: 15px;
-    font-size: 20px;
     display: list-item;
     list-style-type: disc;
   }
