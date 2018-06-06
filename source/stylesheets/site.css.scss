@@ -10,11 +10,19 @@ body {
   background-color: $nord6;
 }
 
+footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  height: 30px;
+}
+
 .content {
   width: 800px;
   margin: 0 auto;
 }
-
 
 .content-block {
   margin-top: 60px;
