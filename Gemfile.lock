@@ -105,8 +105,6 @@ DEPENDENCIES
   middleman (~> 4.2)
   middleman-autoprefixer (~> 2.7)
   middleman-gh_pages
-  tzinfo-data
-  wdm (~> 0.1)
 
 BUNDLED WITH
-   1.16.1
+   1.17.2
