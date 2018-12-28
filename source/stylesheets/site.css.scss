@@ -1,8 +1,6 @@
 @import "normalize";
 @import "nord";
 
-@import url("https://fonts.googleapis.com/css?family=Inconsolata");
-
 .mt-1 {
   margin-top: 1em;
 }
@@ -21,7 +19,7 @@
 
 body {
   position: relative;
-  font-family: "Inconsolata", monospace;
+  font-family: Georgia, serif;
   font-size: 1.3em;
   color: $nord3;
   background-color: $nord6;
