@@ -20,10 +20,13 @@
 }
 
 body {
+  position: relative;
   font-family: "Inconsolata", monospace;
   font-size: 1.3em;
   color: $nord3;
   background-color: $nord6;
+  padding-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 footer {
