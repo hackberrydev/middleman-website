@@ -48,7 +48,7 @@ footer {
   color: $nord15;
 }
 
-dl.toggle-questions {
+dl.homepage {
   dt {
     margin-bottom: 15px;
     display: list-item;
@@ -60,7 +60,6 @@ dl.toggle-questions {
   }
 
   dd {
-    display: none;
     margin-left: 0;
     margin-bottom: 20px;
   }
