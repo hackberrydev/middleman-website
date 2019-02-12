@@ -46,6 +46,9 @@ end
 # end
 #
 
+activate :blog do |blog|
+end
+
 activate :gh_pages do |gh_pages|
   gh_pages.remote = "git@github.com:hackberryco/hackberryco.github.io.git"
   gh_pages.branch = "master"
