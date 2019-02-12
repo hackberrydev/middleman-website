@@ -74,9 +74,9 @@ title: Welcome to Hackberry
     Feel free to get in touch any time by <%= contact_link "sending us an email"%>.
   </p>
 
-  <h2 class="mt-2">Blog</h2>
-
   <% if blog.articles.any? %>
+    <h2 class="mt-2">Blog</h2>
+
     <ul>
       <% blog.articles.each do |article| %>
         <li>
