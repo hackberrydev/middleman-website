@@ -33,7 +33,7 @@ page '/*.txt', layout: false
 
 helpers do
   def contact_link(text)
-    link_to text, "mailto:contact@hackberry.co"
+    link_to text, "mailto:contact@hackberry.dev"
   end
 end
 
