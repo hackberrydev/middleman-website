@@ -46,6 +46,8 @@ end
 # end
 #
 
+activate :syntax
+
 activate :blog do |blog|
 end
 
