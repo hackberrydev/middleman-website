@@ -14,7 +14,7 @@ page "/*.json", layout: false
 page "/*.txt", layout: false
 
 # With alternative layout
- page "/20*", layout: "blog"
+page "/20*", layout: "blog"
 
 # Proxy pages
 # https://middlemanapp.com/advanced/dynamic-pages/
@@ -47,6 +47,9 @@ end
 #
 
 activate :syntax
+
+set :markdown_engine, :redcarpet
+set :markdown, :fenced_code_blocks => true, :smartypants => true
 
 activate :blog do |blog|
 end
