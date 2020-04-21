@@ -28,26 +28,30 @@ our Continuous Integration pipeline.
 
 After a few minutes, we had a working version of the script:
 
-    #!/usr/bin/env ruby
+```ruby
+#!/usr/bin/env ruby
 
-    require "yaml"
+require "yaml"
 
-    sidekiq_yml = File.open("config/sidekiq.yml")
+sidekiq_yml = File.open("config/sidekiq.yml")
 
-    begin
-      YAML.load(sidekiq_yml)
-      puts "sidekiq.yml is valid"
-    rescue => ex
-      puts "sidekiq.yml is not valid"
-      puts "Error: #{ex.message}"
-      exit 1
-    end
+begin
+  YAML.load(sidekiq_yml)
+  puts "sidekiq.yml is valid"
+rescue => ex
+  puts "sidekiq.yml is not valid"
+  puts "Error: #{ex.message}"
+  exit 1
+end
+```
 
 The script works fine, but the name of the YAML file is hard-coded and it's a
 bit verbose. The second version is a Ruby one-liner that can be executed
 directly from a console:
 
-    ruby -e "require 'yaml'; YAML.load(\$stdin.read);" < sidekiq.yml
+```ruby
+ruby -e "require 'yaml'; YAML.load(\$stdin.read);" < sidekiq.yml
+```
 
 This simple one-liner doesn't solve all problems. It confirms that a file is a
 valid YAML file, but it's still possible to deploy a file that contains an
