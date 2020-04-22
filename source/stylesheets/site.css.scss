@@ -31,7 +31,7 @@ body {
   font-size: 1.3em;
   font-family: 'Palanquin', sans-serif;
   color: $nord3;
-  padding-bottom: 50px;
+  padding-bottom: 70px;
   min-height: 100%;
 }
 
@@ -85,4 +85,13 @@ dl.homepage {
   dl.homepage {
     padding-left: 22px;
   }
+}
+
+p code {
+  font-size: 0.9em;
+  color: $nord15;
+}
+
+.author {
+  color: $nord14;
 }
