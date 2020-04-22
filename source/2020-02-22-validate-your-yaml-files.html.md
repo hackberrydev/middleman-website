@@ -1,8 +1,7 @@
 ---
 title: Validate Your YAML Files
+author: Nebojsa Stricevic
 ---
-
-# Validate Your YAML Files
 
 A few months ago, a client project we're working on started using
 [sidekiq-scheduler](https://github.com/Moove-it/sidekiq-scheduler) for handling
