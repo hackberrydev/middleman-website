@@ -9,17 +9,16 @@ scheduled jobs. The tool works well and we started migrating more and more Cron
 jobs to Sidekiq.
 
 A few days ago, after deploying a new set of jobs, we scheduled a few of them to
-test if everything works in production. But, we realized that no jobs were
-being logged in the Sidekiq log file. Since Sidekiq is managed by systemd, we
-inspected the status of the service with `systemctl` and `journalctl` and
-quickly found out that `sidekiq.yml` file is not a valid YAML file. That
-prevented Sidekiq from booting.
+test if everything works in production. But, we realized that no jobs were being
+logged in the Sidekiq log file. Since Sidekiq is managed by systemd, we
+inspected the status of the service with `systemctl` and `journalctl` and found
+out that `sidekiq.yml` file is not a valid YAML file. That prevented Sidekiq
+from booting.
 
 This raised 2 important questions:
 
 - How can we prevent deploying an invalid `sidekiq.yml` file to the server?
-- How can we receive a notification when the Sidekiq service or any other
-  systemd service fails to start?
+- How can we receive a notification when the Sidekiq service fails to start?
 
 As the first line of defence, we decided to implement a simple script to check
 if `sidekiq.yml` is a valid YAML file and to run the script as part of our
