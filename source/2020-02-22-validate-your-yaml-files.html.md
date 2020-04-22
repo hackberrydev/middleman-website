@@ -6,15 +6,15 @@ title: Validate Your YAML Files
 
 A few months ago, a client project we're working on started using
 [sidekiq-scheduler](https://github.com/Moove-it/sidekiq-scheduler) for handling
-scheduled jobs. The tools works well and we started migrating more and more Cron
+scheduled jobs. The tool works well and we started migrating more and more Cron
 jobs to Sidekiq.
 
-After deploying a new set of jobs, we scheduled a few of them to test if
-everything works correctly in production. However, we realized that no jobs are
-logged in the Sidekiq log file. For this project, Sidekiq is managed by systemd,
-so after inspecting the status of the service with `systemctl` and `journalctl`
-we quickly found out that `sidekiq.yml` file is not a valid YAML file, which
-prevents Sidekiq from booting.
+A few days ago, after deploying a new set of jobs, we scheduled a few of them to
+test if everything works correctly in production. However, we realized that no
+jobs are logged in the Sidekiq log file. Since Sidekiq is managed by systemd, we
+inspected the status of the service with `systemctl` and `journalctl` and quickly
+found out that `sidekiq.yml` file is not a valid YAML file, which prevents
+Sidekiq from booting.
 
 This raised 2 important questions:
 
@@ -22,9 +22,9 @@ This raised 2 important questions:
 - How can we be notified when the Sidekiq service or any other systemd service
   fails to start?
 
-As the first line of defence, we decided to implement a simple script to
-validate if `sidekiq.yml` is a valid YAML file and to run the script as part of
-our Continuous Integration pipeline.
+As the first line of defence, we decided to implement a simple script to check
+if `sidekiq.yml` is a valid YAML file and to run the script as part of our
+Continuous Integration pipeline.
 
 After a few minutes, we had a working version of the script:
 
@@ -53,12 +53,12 @@ directly from a console:
 ruby -e "require 'yaml'; YAML.load(\$stdin.read);" < sidekiq.yml
 ```
 
-This simple one-liner doesn't solve all problems. It confirms that a file is a
-valid YAML file, but it's still possible to deploy a file that contains an
-invalid configuration for a library or a service. In some case, the library
-might validate that the configuration is valid, but in others you might want to
-do that yourself. We're still working on a good solution for that problem. For
-now, a smoke test one-liner within a CI pipeline will do the trick.
+This simple one-liner doesn't solve all problems. It's still possible to deploy
+a file that contains a configuration that's not valid for a library or a
+service. In some cases, the library might validate that the configuration, but
+in others you might want to do that yourself. We're still working on a good
+solution for that problem. For now, the smoke test one-liner within a CI pipeline
+will do the trick.
 
 In following blog posts were going to explore ways to monitor a Sidekiq service
 and notify developers if anything goes wrong.
