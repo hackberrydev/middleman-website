@@ -1,10 +1,12 @@
 # Hackberry Website
 
-Hackberry Website implemented with [Middleman](https://middlemanapp.com/).
+[Hackberry Website](https://www.hackberry.dev/) implemented with
+[Middleman](https://middlemanapp.com/).
 
 ## Setup
 
 1. Install Middleman with `gem install middleman`.
-2. Clone the repository.
-3. Enter the repository directory - `cd middleman-website`.
-4. Execute `bundle install --path .bundle`.
+1. Install Node dependencies with `npm install`.
+1. Clone the repository.
+1. Enter the repository directory - `cd hackberry-dev-website`.
+1. Run the server with `./server`.

@@ -9,12 +9,12 @@ end
 # https://middlemanapp.com/basics/layouts/
 
 # Per-page layout changes
-page "/*.xml", layout: false
-page "/*.json", layout: false
-page "/*.txt", layout: false
+page "/*.xml", :layout => false
+page "/*.json", :layout => false
+page "/*.txt", :layout => false
 
 # With alternative layout
-page "/20*", layout: "blog"
+page "/20*", :layout => "blog"
 
 # Proxy pages
 # https://middlemanapp.com/advanced/dynamic-pages/
@@ -58,3 +58,11 @@ activate :gh_pages do |gh_pages|
   gh_pages.remote = "git@github.com:hackberryco/hackberryco.github.io.git"
   gh_pages.branch = "master"
 end
+
+activate(
+  :external_pipeline,
+  :name    => "tailwindcss",
+  :command => "npx tailwindcss -i tailwindcss/source/style.css -o tailwindcss/dist/style.css #{build? ? '' : '--watch'}",
+  :source  => "tailwindcss/dist",
+  :latency => 2
+)
