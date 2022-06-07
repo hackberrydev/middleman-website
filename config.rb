@@ -33,7 +33,7 @@ page "/20*", :layout => "blog"
 
 helpers do
   def contact_link(text)
-    link_to text, "mailto:contact@hackberry.dev"
+    link_to text, "mailto:strika@hackberry.dev"
   end
 end
 
