@@ -32,9 +32,6 @@ page "/20*", :layout => "blog"
 # https://middlemanapp.com/basics/helper-methods/
 
 helpers do
-  def contact_link(text)
-    link_to text, "mailto:strika@hackberry.dev"
-  end
 end
 
 # Build-specific configuration
