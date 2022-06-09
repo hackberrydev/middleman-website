@@ -31,13 +31,13 @@ title: Welcome to Hackberry
 <section>
   <div class=" flex flex-col items-center px-5 py-8 mx-auto max-w-7xl sm:px-6 lg:px-8">
     <div class="flex flex-col w-full max-w-3xl mx-auto prose text-left prose-blue">
-      <div class="w-full mx-auto">
-        <h2>How can we help?</h2>
+      <div class="mx-auto">
+        <h1>How can we help?</h1>
       </div>
     </div>
 
     <%= partial(
-      "blocks/description",
+      "blocks/description_with_icon",
       :locals => {
         :term        => "I have a Rails application and need help with the maintenance",
         :description => "We got this. We work with Rails for more than 10 years. Some applications we maintain are older than 16. Released before Rails 1.0! We find joy in keeping a useful system in a good shape."
@@ -45,7 +45,7 @@ title: Welcome to Hackberry
     ) %>
 
     <%= partial(
-      "blocks/description",
+      "blocks/description_with_icon",
       :locals => {
         :term        => "I have a slow Rails application and want to make it faster.",
         :description => "This happens. There's often not enough time to invest in performance. But performance matters. We use solid, industry standard tools to find performance bottlenecks in your application. Low hanging fruits and high benefits first!"
@@ -53,7 +53,7 @@ title: Welcome to Hackberry
     ) %>
 
     <%= partial(
-      "blocks/description",
+      "blocks/description_with_icon",
       :locals => {
         :term        => "I need help with testing a Rails application.",
         :description => "We would be happy to help! We <strong>always</strong> write tests and we love when other teams take effort to do so. We can help your team start with testing and Test Driven Development. We can write core tests for existing apps, fix flaky tests, optimize test suites and set up a Continuous Integration pipeline for your project."
@@ -61,7 +61,7 @@ title: Welcome to Hackberry
     ) %>
 
     <%= partial(
-      "blocks/description",
+      "blocks/description_with_icon",
       :locals => {
         :term        => "I need help with something else.",
         :description => "Is it on the Web? We can probably do it. We helped our clients automate workflows, launch static and WordPress websites, implement designs and WordPress themes. Even if it's not our core expertise, if you're our client, we'll help any way we can."
@@ -81,22 +81,25 @@ title: Welcome to Hackberry
   </div>
 </section>
 
+<section>
+  <div class=" flex flex-col items-center px-5 py-8 mx-auto max-w-7xl sm:px-6 lg:px-8">
+    <div class="flex flex-col w-full max-w-3xl mx-auto prose text-left prose-blue">
+      <div class="mx-auto">
+        <h1>Projects</h1>
+      </div>
+
+      <%= partial(
+        "blocks/description",
+        :locals => {
+          :term => link_to("Alas", "/alas.html"),
+          :description => "Alas is a command line utility for managing a plan in a single Markdown file."
+        }
+      ) %>
+    </div>
+  </div>
+</section>
+
 <div class="content-block">
-  <h2 class="mt-2">Projects</h2>
-
-  <h3><a href="/alas.html">Alas</a></h3>
-
-
-  <p>
-    Alas is a command line utility for managing a plan in a single Markdown
-    file.
-  </p>
-
-  <p>
-    Alas can insert new empty days into your plan, remove empty days from
-    past, schedule tasks and help you stay in touch with your contacts.
-  </p>
-
   <% if blog.articles.any? %>
     <h2 class="mt-2">Blog</h2>
 
