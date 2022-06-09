@@ -14,10 +14,6 @@
   <body>
     <%= yield %>
 
-    <footer>
-      <small>
-        © 2016 – <%= Date.today.year %> <span class="text-highlight-1">Hackberry</span>
-      </small>
-    </footer>
+    <%= partial("blocks/footer") %>
   </body>
 </html>

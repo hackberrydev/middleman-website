@@ -881,6 +881,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-prose-invert-links: #3b82f6;
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
 .static {
   position: static;
 }
@@ -893,6 +905,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .my-10 {
   margin-top: 2.5rem;
   margin-bottom: 2.5rem;
+}
+
+.mx-2 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
 
 .mb-12 {
@@ -979,8 +996,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   flex-direction: column;
 }
 
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
 .items-center {
   align-items: center;
+}
+
+.items-baseline {
+  align-items: baseline;
 }
 
 .justify-center {
@@ -1003,6 +1028,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bg-gray-50 {
   --tw-bg-opacity: 1;
   background-color: rgb(249 250 251 / var(--tw-bg-opacity));
+}
+
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 .px-4 {
@@ -1047,8 +1077,17 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 1.5rem;
 }
 
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
 .font-bold {
   font-weight: 700;
+}
+
+.font-light {
+  font-weight: 300;
 }
 
 .leading-none {
@@ -1074,6 +1113,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .text-gray-500 {
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-text-opacity));
+}
+
+.hover\:text-gray-500:hover {
   --tw-text-opacity: 1;
   color: rgb(107 114 128 / var(--tw-text-opacity));
 }
@@ -1118,6 +1162,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     max-width: 80rem;
   }
 
+  .lg\:justify-center {
+    justify-content: center;
+  }
+
   .lg\:px-24 {
     padding-left: 6rem;
     padding-right: 6rem;
@@ -1131,6 +1179,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   .lg\:px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+
+  .lg\:px-16 {
+    padding-left: 4rem;
+    padding-right: 4rem;
   }
 
   .lg\:text-6xl {
