@@ -1,5 +1,8 @@
 module.exports = {
-  content: ["./source/**/*.html.erb"],
+  content: [
+    "./source/**/*.html.erb",
+    "./source/**/*.html.md.erb"
+  ],
   theme: {
     extend: {},
   },
