@@ -26,8 +26,7 @@ Continuous Integration pipeline.
 
 After a few minutes, we had a working version of the script:
 
-<div class="not-prose my-5">
-  <% code("ruby") do %>
+<% code_block("ruby") do %>
 #!/usr/bin/env ruby
 
 require "yaml"
@@ -42,17 +41,14 @@ rescue => ex
   puts "Error: #{ex.message}"
   exit 1
 end
-  <% end %>
-</div>
+<% end %>
 
 The script works fine, but the name of the YAML file is hard-coded and is a bit
 verbose. The second version is a Ruby one-liner that's executed from a console:
 
-<div class="not-prose my-5">
-  <% code("ruby") do %>
+<% code_block("ruby") do %>
 ruby -e "require 'yaml'; YAML.load(\$stdin.read);" < sidekiq.yml
-  <% end %>
-</div>
+<% end %>
 
 This simple one-liner doesn't solve all problems. It's still possible to deploy
 a file that contains a configuration that's not valid for a library or a
