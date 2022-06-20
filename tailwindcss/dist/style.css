@@ -876,9 +876,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 0;
 }
 
-.prose-blue {
-  --tw-prose-links: #2563eb;
-  --tw-prose-invert-links: #3b82f6;
+.prose-emerald {
+  --tw-prose-links: #059669;
+  --tw-prose-invert-links: #10b981;
 }
 
 .sr-only {
@@ -1187,9 +1187,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   letter-spacing: 0.1em;
 }
 
-.text-blue-600 {
+.text-emerald-600 {
   --tw-text-opacity: 1;
-  color: rgb(37 99 235 / var(--tw-text-opacity));
+  color: rgb(5 150 105 / var(--tw-text-opacity));
 }
 
 .text-neutral-600 {
@@ -1200,6 +1200,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-gray-500 {
   --tw-text-opacity: 1;
   color: rgb(107 114 128 / var(--tw-text-opacity));
+}
+
+.text-blue-600 {
+  --tw-text-opacity: 1;
+  color: rgb(37 99 235 / var(--tw-text-opacity));
 }
 
 .no-underline {
@@ -1221,6 +1226,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .ease-in-out {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+  background-color: #F5F5F5;
 }
 
 .hover\:text-neutral-600:hover {
