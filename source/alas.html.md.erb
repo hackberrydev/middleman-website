@@ -8,7 +8,7 @@ Alas is a command line utility for managing a plan in a single Markdown file.
 
 An example plan:
 
-<% code_block("markdown") %>
+<% code_block("markdown") do %>
 # My Plan
 
 ## Inbox
@@ -51,13 +51,13 @@ option.
 
 First, use your favorite text editor to create a plan file (e.g. `plan.md`):
 
-```markdown
+<% code_block("markdown") do %>
 # My Plan
 
 ## Inbox
 
 ## 2022-05-12
-```
+<% end %>
 
 Start adding new days and tasks. You can use this plan file even without
 the `alas` command utility.
@@ -72,9 +72,9 @@ to your `PATH` and you can run `alas` with your plan file.
 You can also put the executable in the same directory as your plan file and
 use the relative path to run Alas:
 
-```bash
+<% code_block("bash") do %>
 ./alas plan.md
-```
+<% end %>
 
 #### Windows
 
@@ -92,14 +92,14 @@ related issues.
 
 Alas is usually executed with the same command every day. For example:
 
-```bash
+<% code_block("bash") do %>
 alas --insert-days 3 \
  --remove-empty-days \
  --skip-backup \
  --schedule-tasks scheduled.md \
  --schedule-contacts contacts \
  plan.md
-```
+<% end %>
 
 To avoid typing the long command, you can create an alias for your shell or
 a small script and run that instead.
@@ -107,7 +107,7 @@ a small script and run that instead.
 Here's an example script that runs Alas on a plan file, runs Tmux and opens
 the plan file in Vim:
 
-```bash
+<% code_block("bash") do %>
 #!/usr/bin/env bash
 
 cd ~/wiki
@@ -119,7 +119,7 @@ alas --insert-days 3 \
  plan.md
 tmux new-session -d 'vim plan.md'
 tmux -2 attach-session -d
-```
+<% end %>
 
 ## Commands
 
@@ -133,12 +133,12 @@ default. To skip creating a backup, pass the `--skip-backup` option.
 `alas --stats` command will print the number of days in your plan, the number
 of completed tasks and the number of pending tasks:
 
-```bash
+<% code_block("bash") do %>
 $ alas --stats ~/todo.md
 2 days
 3 completed tasks
 1 pending task
-```
+<% end %>
 
 ### `--insert-days`
 
@@ -158,7 +158,7 @@ tasks from the plan.
 
 Alas allows keeping a list of scheduled tasks in a separate file. For example:
 
-```markdown
+<% code_block("markdown") do %>
 # My Scheduled Tasks
 
 - Meeting with John (on 2022-05-12)
@@ -169,14 +169,14 @@ Alas allows keeping a list of scheduled tasks in a separate file. For example:
 - #work - Deploy new version (every weekday)
 - #work - Generate monthly report (every month)
 - #work - Generate quarterly report (every 3 months)
-```
+<% end %>
 
 You can then run the following command to insert matching scheduled tasks into
 your plan:
 
-```bash
+<% code_block("bash") do %>
 alas --insert-days 3 --schedule-tasks scheduled.md plan.md
-```
+<% end %>
 
 Alas supports the following schedule options:
 
@@ -206,7 +206,7 @@ a while. Alas can also schedule a reminder for a birthday.
 Each contact is stored in a separate Markdown file. All contact files should
 be in a single directory, separate from other Markdown files. For example:
 
-```
+<% code_block("bash") do %>
 ├── contacts
 │   ├── john-doe.md
 │   ├── marry-doe.md
@@ -215,12 +215,12 @@ be in a single directory, separate from other Markdown files. For example:
 ├── diary.md
 ├── plan.md
 └── scheduled.md
-```
+<% end %>
 
 Each contact file has the same structure - the contact name, details and the
 log of communication.
 
-```markdown
+<% code_block("markdown") do %>
 # John Doe
 
 - Birthday: 04-27
@@ -233,15 +233,15 @@ Talked over the phone about stuff.
 ## 2022-01-28
 
 Grabbed a beer and talked about stuff.
-```
+<% end %>
 
 The first line is the title that holds the contact name.
 
 Then, there's a list of details. Each detail has the same structure:
 
-```markdown
+<% code_block("markdown") do %>
 - Detail name: Detail value
-```
+<% end %>
 
 A contact can have as many details as you need. However, 2 details are special:
 `Birthday` and `Category`.
@@ -262,13 +262,13 @@ categories are defined as:
 The command input requires a path to the directory that holds the contact
 files. For example:
 
-```bash
+<% code_block("bash") do %>
 alas --insert-days 3 --schedule-contacts contacts plan.md
-```
+<% end %>
 
 This command might insert new contact tasks for today:
 
-```markdown
+<% code_block("markdown") do %>
 # My Plan
 
 ## Inbox
@@ -280,7 +280,7 @@ This command might insert new contact tasks for today:
 - [ ] Contact John Doe
 - [ ] Congratulate birthday to Marry Doe
 - [X] Pay bills
-```
+<% end %>
 
 **Note:** Alas will insert contact tasks only for days that are already
 present in the plan. If a day doesn't exist, `--schedule-contacts` won't
@@ -297,6 +297,6 @@ only when no other commands are used.
 
 Alas supports running multiple commands:
 
-```bash
+<% code_block("bash") do %>
 alas --insert-days 3 --remove-empty-days plan.md
-```
+<% end %>

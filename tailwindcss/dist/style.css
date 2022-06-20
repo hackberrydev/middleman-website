@@ -897,9 +897,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   position: static;
 }
 
-.my-5 {
-  margin-top: 1.25rem;
-  margin-bottom: 1.25rem;
+.relative {
+  position: relative;
 }
 
 .mx-auto {

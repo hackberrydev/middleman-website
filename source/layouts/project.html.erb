@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Use the title from a page's frontmatter if it has one -->
+    <title><%= current_page.data.title || "Middleman" %></title>
+
+    <%= stylesheet_link_tag "style" %>
+    <%= stylesheet_link_tag "code" %>
+  </head>
+  <body>
+    <%= partial("blocks/header") %>
+
+    <div class=" w-full px-5 py-24 mx-auto lg:px-32">
+      <div class="flex flex-col w-full mx-auto mb-2 prose text-left prose-md">
+        <h1><%= current_page.data.title %></h1>
+
+        <%= yield %>
+      </div>
+    </div>
+
+    <%= partial("blocks/footer") %>
+  </body>
+</html>
