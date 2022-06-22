@@ -772,6 +772,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 .prose :where(p):not(:where([class~="not-prose"] *)) {
   margin-top: 1.25em;
   margin-bottom: 1.25em;
+  text-size: 1.125rem;
+  font-size: 1.125rem;
 }
 
 .prose :where(img):not(:where([class~="not-prose"] *)) {
@@ -1129,27 +1131,22 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .text-2xl {
   font-size: 1.5rem;
-  line-height: 2rem;
 }
 
 .text-base {
-  font-size: 1rem;
-  line-height: 1.5rem;
+  font-size: 1.125rem;
 }
 
 .text-xs {
-  font-size: 0.75rem;
-  line-height: 1rem;
+  font-size: .75rem;
 }
 
 .text-sm {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
+  font-size: .875rem;
 }
 
 .text-3xl {
   font-size: 1.875rem;
-  line-height: 2.25rem;
 }
 
 .font-bold {
@@ -1291,7 +1288,6 @@ body {
 
   .md\:text-5xl {
     font-size: 3rem;
-    line-height: 1;
   }
 }
 
@@ -1346,7 +1342,6 @@ body {
   }
 
   .lg\:text-6xl {
-    font-size: 3.75rem;
-    line-height: 1;
+    font-size: 4rem;
   }
 }
