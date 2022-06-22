@@ -26,7 +26,7 @@ Continuous Integration pipeline.
 
 After a few minutes, we had a working version of the script:
 
-```ruby
+<% code_block("ruby") do %>
 #!/usr/bin/env ruby
 
 require "yaml"
@@ -41,14 +41,14 @@ rescue => ex
   puts "Error: #{ex.message}"
   exit 1
 end
-```
+<% end %>
 
 The script works fine, but the name of the YAML file is hard-coded and is a bit
 verbose. The second version is a Ruby one-liner that's executed from a console:
 
-```ruby
+<% code_block("ruby") do %>
 ruby -e "require 'yaml'; YAML.load(\$stdin.read);" < sidekiq.yml
-```
+<% end %>
 
 This simple one-liner doesn't solve all problems. It's still possible to deploy
 a file that contains a configuration that's not valid for a library or a
@@ -56,9 +56,6 @@ service. In some cases, the library might validate the configuration. In others
 you might want to do that yourself. We're still working on a good solution for
 that problem. For now, the smoke test one-liner within a CI pipeline will do the
 trick.
-
-In following blog posts we're going to explore ways to monitor a Sidekiq service
-and notify developers if anything goes wrong.
 
 What's your solution for validating YAML files and other configuration?
 

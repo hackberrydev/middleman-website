@@ -9,12 +9,12 @@ end
 # https://middlemanapp.com/basics/layouts/
 
 # Per-page layout changes
-page "/*.xml", layout: false
-page "/*.json", layout: false
-page "/*.txt", layout: false
+page "/*.xml", :layout => false
+page "/*.json", :layout => false
+page "/*.txt", :layout => false
 
 # With alternative layout
-page "/20*", layout: "blog"
+page "/20*", :layout => "blog"
 
 # Proxy pages
 # https://middlemanapp.com/advanced/dynamic-pages/
@@ -32,9 +32,6 @@ page "/20*", layout: "blog"
 # https://middlemanapp.com/basics/helper-methods/
 
 helpers do
-  def contact_link(text)
-    link_to text, "mailto:contact@hackberry.dev"
-  end
 end
 
 # Build-specific configuration
@@ -46,7 +43,8 @@ end
 # end
 #
 
-activate :syntax
+activate :syntax do |config|
+end
 
 set :markdown_engine, :redcarpet
 set :markdown, :fenced_code_blocks => true, :smartypants => true
@@ -55,6 +53,14 @@ activate :blog do |blog|
 end
 
 activate :gh_pages do |gh_pages|
-  gh_pages.remote = "git@github.com:hackberryco/hackberryco.github.io.git"
+  gh_pages.remote = "git@github.com:hackberrydev/hackberrydev.github.io"
   gh_pages.branch = "master"
 end
+
+activate(
+  :external_pipeline,
+  :name    => "tailwindcss",
+  :command => "npx tailwindcss -i tailwindcss/source/style.css -o tailwindcss/dist/style.css #{build? ? '' : '--watch'}",
+  :source  => "tailwindcss/dist",
+  :latency => 2
+)
