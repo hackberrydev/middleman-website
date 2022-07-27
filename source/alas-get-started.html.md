@@ -54,3 +54,11 @@ information.
 Since Janet wasn't tested on Windows, we expect some problems. You can
 try running `alas` from the same directory as you plan file, to avoid path
 related issues.
+
+## Running Multiple Commands
+
+Alas supports running multiple commands:
+
+```bash
+alas --insert-days 3 --remove-empty-days --schedule-tasks scheduled.md plan.md
+```
