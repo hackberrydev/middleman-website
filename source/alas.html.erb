@@ -1,0 +1,150 @@
+---
+title: "Alas"
+---
+<section>
+  <div class="px-4 py-12 mx-auto max-w-7xl sm:px-6 md:px-12 lg:px-24 lg:py-24">
+    <div class="flex flex-col w-full mb-12 text-center">
+      <h1 class="max-w-5xl text-2xl font-bold leading-none tracking-tighter text-neutral-600 md:text-5xl lg:text-6xl lg:max-w-7xl">
+        Use the most powerful tool to plan your life and work - a single text file
+      </h1>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="px-4 py-12 mx-auto max-w-7xl sm:px-6 md:px-12 lg:px-24 lg:py-24">
+    <div class="flex flex-wrap items-center mx-auto max-w-7xl">
+      <div class="w-full lg:max-w-lg lg:w-1/2 rounded-xl">
+        <div>
+          <div class="not-prose my-5">
+            <div class="highlight">
+<pre class="highlight markdown">
+<code><span class="gh"># My Plan</span>
+
+<span class="gu">## Inbox</span>
+<span class="p">
+-</span> [ ] #home - Fix the lamp
+<span class="p">-</span> [ ] Update Rust
+
+<span class="gu">## <span data-date-example="0">2020-08-01, Saturday</span></span>
+<span class="p">
+-</span> [ ] Develop photos
+<span class="p">-</span> [X] Pay bills
+
+<span class="gu">## <span data-date-example="-1">2020-07-31, Friday</span></span>
+<span class="p">
+-</span> Met with Mike and Molly
+<span class="p">-</span> [X] #work - Review open pull requests
+<span class="p">-</span> [X] #work - Fix the flaky test</code>
+</pre>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col items-start mt-12 mb-16 text-left lg:flex-grow lg:w-1/2 lg:pl-6 xl:pl-24 md:mb-0 xl:mt-0">
+        <dl class="grid grid-cols-1 gap-4 md:grid-cols-2">
+          <%= partial(
+            "alas/feature",
+            :locals => {
+              :title       => "Schedule tasks",
+              :description => "Keep tasks scheduled in future in another text file.",
+              :href        => "/alas-schedule-tasks.html"
+            }
+          ) %>
+          <%= partial(
+            "alas/feature",
+            :locals => {
+              :title       => "Manage contacts",
+              :description => "Keep in touch with your family, friends and contacts.",
+              :href        => "/alas-schedule-contacts.html"
+            }
+          ) %>
+          <%= partial(
+            "alas/feature",
+            :locals => {
+              :title       => "Free",
+              :description => "Alas is released under MIT licence and the code is available online.",
+              :href        => "https://github.com/hackberrydev/alas"
+            }
+          ) %>
+          <%= partial(
+            "alas/feature",
+            :locals => {
+              :title       => "No vendor lock-in",
+              :description => "You own the data. Works with any text editor.",
+              :href        => "/alas-editor.html"
+            }
+          ) %>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class=" flex flex-col items-center px-5 py-8 mx-auto max-w-7xl sm:px-6 lg:px-8">
+    <a href="/alas-get-started.html" class="px-5 py-4 text-base font-medium text-center text-white transition duration-500 ease-in-out transform bg-green-600 lg:px-10 rounded-xl hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">Get started</a>
+  </div>
+</section>
+
+<section>
+  <div class=" flex flex-col items-center px-5 py-8 mx-auto max-w-7xl sm:px-6 lg:px-8">
+    <div class="flex flex-col w-full max-w-3xl mx-auto prose text-left prose-blue">
+      <div class="w-full mx-auto">
+        <h2>Choose any text editor and Alas CLI to maintain the text file</h2>
+
+<% code_block("bash") do %>
+alas --insert-days 3 \
+  --remove-empty-days \
+  --schedule-tasks scheduled.md \
+  --schedule-contacts contacts \
+  plan.md
+<% end %>
+
+        <p>
+          Alas is a <span title="Command Line Interface">CLI</span> application
+          that helps you maintain your plan file. Alas supports a number
+          of commands for updating the plan file.
+        </p>
+
+        <dl>
+          <%= partial(
+            "alas/command",
+            :locals => {
+              :command => "--insert-days",
+              :description => "<code>alas --insert-days 3</code> will insert 3 new days (starting from today) into your plan file."
+            }
+          ) %>
+
+          <%= partial(
+            "alas/command",
+            :locals => {
+              :command => "--remove-empty-days",
+              :description => "<code>alas --remove-empty-days</code> will remove past days that don't have any events or tasks from the plan."
+            }
+          ) %>
+
+          <%= partial(
+            "alas/command",
+            :locals => {
+              :command => "--schedule-tasks",
+              :description => "Insert task scheduled for today into the plan."
+            }
+          ) %>
+
+          <%= partial(
+            "alas/command",
+            :locals => {
+              :command => "--schedule-contacts",
+              :description => "Insert tasks to get in touch with your friends and family."
+            }
+          ) %>
+        </dl>
+
+        <div class=" flex flex-col items-center px-5 py-8 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <a href="/alas-skip-backup.html" class="items-center block px-5 lg:px-10 py-3.5 text-base font-medium text-center no-underline text-green-600 transition duration-500 ease-in-out transform border-2 border-white shadow-md rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">And More...</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

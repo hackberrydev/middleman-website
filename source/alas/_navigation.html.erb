@@ -1,0 +1,113 @@
+<div class="flex flex-col w-64">
+  <div class="flex flex-col flex-grow pt-5 overflow-y-auto bg-white border-r border-gray-50">
+    <div class="flex flex-col flex-grow px-4 mt-5">
+      <nav class="flex-1 space-y-1 bg-white">
+        <ul>
+          <%= partial(
+            "alas/navigation_item",
+            :locals => {
+              :title => "Get Started",
+              :href  => "/alas-get-started.html"
+            }
+          ) %>
+
+          <%= partial(
+            "alas/navigation_item",
+            :locals => {
+              :title => "Alas Format",
+              :href  => "/alas-format.html"
+            }
+          ) %>
+
+          <%= partial(
+            "alas/navigation_item",
+            :locals => {
+              :title => "Editing Plan",
+              :href  => "/alas-editor.html"
+            }
+          ) %>
+
+          <%= partial(
+            "alas/navigation_item",
+            :locals => {
+              :title => "--skip-backup",
+              :href  => "/alas-skip-backup.html"
+            }
+          ) %>
+
+          <%= partial(
+            "alas/navigation_item",
+            :locals => {
+              :title => "--stats",
+              :href  => "/alas-stats.html"
+            }
+          ) %>
+
+          <%= partial(
+            "alas/navigation_item",
+            :locals => {
+              :title => "--insert-days",
+              :href  => "/alas-insert-days.html"
+            }
+          ) %>
+
+          <%= partial(
+            "alas/navigation_item",
+            :locals => {
+              :title => "--remove-empty-days",
+              :href  => "/alas-remove-empty-days.html"
+            }
+          ) %>
+
+          <%= partial(
+            "alas/navigation_item",
+            :locals => {
+              :title => "--insert-task",
+              :href  => "/alas-insert-task.html"
+            }
+          ) %>
+
+          <%= partial(
+            "alas/navigation_item",
+            :locals => {
+              :title => "--report",
+              :href  => "/alas-report.html"
+            }
+          ) %>
+
+          <%= partial(
+            "alas/navigation_item",
+            :locals => {
+              :title => "--schedule-tasks",
+              :href  => "/alas-schedule-tasks.html"
+            }
+          ) %>
+
+          <%= partial(
+            "alas/navigation_item",
+            :locals => {
+              :title => "--schedule-contacts",
+              :href  => "/alas-schedule-contacts.html"
+            }
+          ) %>
+
+          <%= partial(
+            "alas/navigation_item",
+            :locals => {
+              :title => "--version",
+              :href  => "/alas-version.html"
+            }
+          ) %>
+
+          <%= partial(
+            "alas/navigation_item",
+            :locals => {
+              :title => "Tips",
+              :href  => "/alas-tips.html"
+            }
+          ) %>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>

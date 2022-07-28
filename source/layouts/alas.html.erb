@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Use the title from a page's frontmatter if it has one -->
+    <title><%= current_page.data.title || "Alas" %></title>
+
+    <%= stylesheet_link_tag "style" %>
+    <%= stylesheet_link_tag "code" %>
+  </head>
+  <body>
+    <%= partial("blocks/header") %>
+
+    <div class="flex overflow-hidden bg-white rounded-lg">
+      <%= partial("alas/navigation") %>
+
+      <div class="flex flex-col flex-1 w-0 overflow-hidden">
+        <section>
+          <div class=" flex flex-col items-center px-5 py-8 mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <div class="flex flex-col w-full max-w-3xl mx-auto prose text-left prose-blue">
+              <div class="w-full mx-auto -mx-32">
+                <h2><%= current_page.data.title %></h2>
+
+                <%= yield %>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <%= partial("blocks/footer") %>
+  </body>
+</html>

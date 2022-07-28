@@ -2,7 +2,11 @@
   <div x-data="{ open: false }" class="flex flex-col max-w-screen-xl p-5 mx-auto md:items-center md:justify-center md:flex-row md:px-6 lg:px-8">
     <div class="flex flex-row items-center justify-between lg:justify-start">
       <a href="/index.html" class="text-3xl font-bold tracking-tighter text-green-600 transition duration-500 ease-in-out transform tracking-relaxed lg:pr-8">
-        Hackberry
+        <% if current_page.data.project_name %>
+          <%= current_page.data.project_name %> by Hackberry
+        <% else %>
+          Hackberry
+        <% end %>
       </a>
       <button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open">
         <svg fill="currentColor" viewBox="0 0 20 20" class="w-8 h-8">
