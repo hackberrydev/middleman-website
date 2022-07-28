@@ -22,6 +22,14 @@
           <%= partial(
             "alas/navigation_item",
             :locals => {
+              :title => "Editing Plan",
+              :href  => "/alas-editor.html"
+            }
+          ) %>
+
+          <%= partial(
+            "alas/navigation_item",
+            :locals => {
               :title => "--skip-backup",
               :href  => "/alas-skip-backup.html"
             }
