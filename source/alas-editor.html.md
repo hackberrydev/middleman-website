@@ -1,6 +1,7 @@
 ---
 title: Editor
 layout: alas
+project_name: Alas
 ---
 
 The Alas plan file is a Markdown text file with a special format. So, you can

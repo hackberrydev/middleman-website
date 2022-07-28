@@ -1,6 +1,7 @@
 ---
 title: --insert-days
 layout: alas
+project_name: Alas
 ---
 
 `alas --insert-days 3` will insert 3 new days (starting from today) in your plan

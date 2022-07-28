@@ -1,6 +1,7 @@
 ---
 title: Alas Format
 layout: alas
+project_name: Alas
 ---
 
 Alas is using [Markdown](https://en.wikipedia.org/wiki/Markdown) format with

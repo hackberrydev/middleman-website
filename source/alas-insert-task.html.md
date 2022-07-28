@@ -1,6 +1,7 @@
 ---
 title: --insert-task
 layout: alas
+project_name: Alas
 ---
 
 `alas --insert-task "Upgrade OS" plan.md` will insert a new task for today with

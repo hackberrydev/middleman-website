@@ -1,6 +1,7 @@
 ---
 title: --version
 layout: alas
+project_name: Alas
 ---
 
 `alas --version` will output the version and exit. This command is available

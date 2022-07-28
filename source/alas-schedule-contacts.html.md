@@ -1,6 +1,7 @@
 ---
 title: --schedule-contacts
 layout: alas
+project_name: Alas
 ---
 
 Alas can help you keep in touch with your contacts - family, friends and

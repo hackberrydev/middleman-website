@@ -1,6 +1,7 @@
 ---
 title: Tips for Using Alas
 layout: alas
+project_name: Alas
 ---
 
 Alas is usually executed with the same command every day. For example:

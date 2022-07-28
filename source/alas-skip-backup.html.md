@@ -1,6 +1,7 @@
 ---
 title: --skip-backup
 layout: alas
+project_name: Alas
 ---
 
 Alas will create a backup of the plan file before running any other commands, by

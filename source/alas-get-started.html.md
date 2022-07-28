@@ -1,6 +1,7 @@
 ---
 title: Getting Started With Alas
 layout: alas
+project_name: Alas
 ---
 
 ## Warning

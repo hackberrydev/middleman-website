@@ -1,6 +1,7 @@
 ---
 title: --stats
 layout: alas
+project_name: Alas
 ---
 
 `alas --stats` command will print the number of days in your plan, the number

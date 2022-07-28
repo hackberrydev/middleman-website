@@ -1,6 +1,7 @@
 ---
 title: --schedule-tasks
 layout: alas
+project_name: Alas
 ---
 
 Alas allows keeping a list of scheduled tasks in a separate file. For example:
