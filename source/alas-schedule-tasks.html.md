@@ -43,3 +43,11 @@ executed before `--schedule-tasks`.
 
 If you don't use `--insert-days`, you need to insert empty days manually or in
 some other way before running `--schedule-tasks`.
+
+## Missed Scheduled Tasks
+
+If you don't run Alas every day, it's possible to miss scheduling a task. If a
+task scheduling is missed, the task will be scheduled the next time you execute
+`--schedule-tasks`.
+
+Missed tasks are marked. For example `- Review logs (missed on 2022-09-05)`.
