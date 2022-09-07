@@ -94,3 +94,11 @@ insert a day.  This means that it's best to use `--schedule-contacts` in
 combination with `--insert-days`. Alas will make sure that `--insert-days`
 is always executed before `--schedule-contacts`.
 
+## Missed Birthday Reminders
+
+If you don't run Alas every day, it's possible to miss scheduling a birthday
+reminder. If a birthday reminder scheduling is missed, the task will be
+scheduled the next time you execute `--schedule-contacts`.
+
+Missed tasks are marked. For example `- Congratulate birthday to Jane
+(missed on 2022-09-05)`.
