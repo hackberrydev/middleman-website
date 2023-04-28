@@ -10,3 +10,7 @@
 1. Install Ruby dependencies with `bundle install`.
 1. Install Node dependencies with `npm install`.
 1. Run the server with `./server`.
+
+## Deploying
+
+The website is manually deployed by running `./deploy`.
