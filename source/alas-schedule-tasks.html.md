@@ -30,8 +30,10 @@ Alas supports the following schedule options:
 
 - Specific day of the week - `every Monday`, `every Tuesday`, etc.
 - On weekdays - `every weekday` - any day of the week except Saturday and Sunday.
-- First of the month - `every month`.
-- First of the quarter - `every 3 months` - January 1st, April 1st, July 1st, October 1st.
+- The first day of the month - `every month`.
+- The last day of the month - `every last day`.
+- The last Friday of the month - `every last Friday`.
+- The first day of the quarter - `every 3 months` - January 1st, April 1st, July 1st, October 1st.
 - A specific day every year - `every year on 05-15`.
 - A specific date - `on 2025-05-15`.
 
