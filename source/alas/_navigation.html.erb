@@ -38,32 +38,8 @@
           <%= partial(
             "alas/navigation_item",
             :locals => {
-              :title => "--skip-backup",
-              :href  => "/alas-skip-backup"
-            }
-          ) %>
-
-          <%= partial(
-            "alas/navigation_item",
-            :locals => {
-              :title => "--stats",
-              :href  => "/alas-stats"
-            }
-          ) %>
-
-          <%= partial(
-            "alas/navigation_item",
-            :locals => {
               :title => "--insert-days",
               :href  => "/alas-insert-days"
-            }
-          ) %>
-
-          <%= partial(
-            "alas/navigation_item",
-            :locals => {
-              :title => "--remove-empty-days",
-              :href  => "/alas-remove-empty-days"
             }
           ) %>
 
@@ -86,8 +62,24 @@
           <%= partial(
             "alas/navigation_item",
             :locals => {
+              :title => "--remove-empty-days",
+              :href  => "/alas-remove-empty-days"
+            }
+          ) %>
+
+          <%= partial(
+            "alas/navigation_item",
+            :locals => {
               :title => "--report",
               :href  => "/alas-report"
+            }
+          ) %>
+
+          <%= partial(
+            "alas/navigation_item",
+            :locals => {
+              :title => "--schedule-contacts",
+              :href  => "/alas-schedule-contacts"
             }
           ) %>
 
@@ -102,8 +94,16 @@
           <%= partial(
             "alas/navigation_item",
             :locals => {
-              :title => "--schedule-contacts",
-              :href  => "/alas-schedule-contacts"
+              :title => "--skip-backup",
+              :href  => "/alas-skip-backup"
+            }
+          ) %>
+
+          <%= partial(
+            "alas/navigation_item",
+            :locals => {
+              :title => "--stats",
+              :href  => "/alas-stats"
             }
           ) %>
 
