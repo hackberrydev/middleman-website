@@ -52,4 +52,6 @@ If you don't run Alas every day, it's possible to miss scheduling a task. If a
 task scheduling is missed, the task will be scheduled the next time you execute
 `--schedule-tasks`.
 
+Alas will schedule only missed tasks that are not older than 30 days.
+
 Missed tasks are marked. For example `- Review logs (missed on 2022-09-05)`.
