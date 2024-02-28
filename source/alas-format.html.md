@@ -26,6 +26,7 @@ The following example shows all special forms of the Alas plan file format.
 ## 2022-07-27, Wednesday
 
 - Met with Mike and Molly
+  They have a new apartment. It's closer to our place.
 - [X] #work - Weekly meeting
   - Discuss slow tests
   - Should we migrate to a new server?
@@ -46,6 +47,9 @@ The inbox section has tasks, but it can also be empty.
 
 ## Days
 
+Each day starts with a day title, optionally followed by events, optionally
+followed by tasks. Events and tasks can't be mixed.
+
 A day starts with the date title in the following form - the title mark (`##`),
 followed by a date in the following form `YYYY-MM-DD`, followed by a comma,
 followed by a day name (`Monday`, `Tuesday`, etc.)
@@ -54,6 +58,32 @@ For example:
 
 ```markdown
 ## 2022-07-28, Thursday
+```
+
+## Events
+
+Each event starts with a dash (`-`), followed by an event title, optionally
+followed by an event body.
+
+They are used to log stuff that happened that you want to remember.
+
+The following event has only a title:
+
+```markdown
+- Met with Mike and Molly
+```
+
+The following 2 events have a body. A body is optional. A body is all text that
+follows the event title and it's indented 2 spaces. It can, but it doesn't have
+to start with a dash or some other symbol.
+
+```markdown
+- Saw a wryneck
+  I was suprised to see a wryneck. They shouldn't get back for another month.
+  I guess that's because it's so hot this year.
+- Jane called me today
+  - They have a dog
+  - They plan a trip in May
 ```
 
 ## Tasks
@@ -87,15 +117,4 @@ to start with a dash or some other symbol.
 - [X] #work - Review open pull requests
   Jane made 2 pull requests related to the billing system. Review those
   carefully.
-```
-
-## Events
-
-Events have a single line. They start with a dash and don't have a
-checkbox. They are used to log stuff that happened and you want to remember.
-
-For example:
-
-```markdown
-- Met with Mike and Molly
 ```
