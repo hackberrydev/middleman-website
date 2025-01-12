@@ -11,6 +11,7 @@ Alas allows keeping a list of scheduled tasks in a separate file. For example:
 
 - Meeting with John (on 2022-05-12)
 - Tina's birthday (every year on 10-11)
+- Clean air purifier filters (every month on 15)
 - Run 20 minutes (every Monday)
 - Run 20 minutes (every Thursday)
 - #work - Weekly meeting (every Tuesday)
