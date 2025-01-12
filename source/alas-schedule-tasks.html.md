@@ -15,6 +15,7 @@ Alas allows keeping a list of scheduled tasks in a separate file. For example:
 - Run 20 minutes (every Thursday)
 - #work - Weekly meeting (every Tuesday)
 - #work - Deploy new version (every weekday)
+- #work - Review logs (every last weekday)
 - #work - Generate monthly report (every month)
 - #work - Generate quarterly report (every 3 months)
 ```
@@ -29,7 +30,12 @@ alas --insert-days 3 --schedule-tasks scheduled.md plan.md
 Alas supports the following schedule options:
 
 - Specific day of the week - `every Monday`, `every Tuesday`, etc.
+- Specific date in a month - `every month on 12` - every month on 12th. (Note
+that using "30" or "31" will skip some months such as February and months
+that don't have 13 days.)
 - On weekdays - `every weekday` - any day of the week except Saturday and Sunday.
+- On every last weekday in a month - `every last weekday` - the last weekday
+(Friday or some other day) in a month.
 - The first day of the month - `every month`.
 - The last day of the month - `every last day`.
 - The last Friday of the month - `every last Friday`.
