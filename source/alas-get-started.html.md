@@ -32,7 +32,7 @@ the `alas` command utility.
 
 ## Installing Alas
 
-If you are using MacOS or a Linux based operating system, visit the Alas
+If you are using a Linux based operating system, visit the Alas
 [releases](https://github.com/hackberrydev/alas/releases) page and download
 the latest release for your operating system. Add the Alas executable path
 to your `PATH`. Now you can run `alas` with your plan file.
@@ -44,15 +44,15 @@ use the relative path to run Alas:
 ./alas plan.md
 ```
 
-### Windows
+### MacOS and Windows
 
-At the moment, we don't provide an executable for Windows. However, you
-can try compiling Alas on Windows and running it. To compile Alas, you
-need [Janet](https://janet-lang.org) and JPM. See Janet [installation
+At the moment, we don't provide an executable for MacOs and Windows.
+However, you can try compiling Alas yourelf and running it. To compile Alas,
+you need [Janet](https://janet-lang.org) and JPM. See Janet [installation
 instructions](https://janet-lang.org/1.21.0/docs/index.html) for more
 information.
 
-Since Janet wasn't tested on Windows, we expect some problems. You can
+Since Janet wasn't tested on MacOS and Windows, we expect some problems. You can
 try running `alas` from the same directory as you plan file, to avoid path
 related issues.
 
