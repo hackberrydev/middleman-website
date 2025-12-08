@@ -2,6 +2,7 @@ source "https://rubygems.org"
 
 gem "bigdecimal"
 gem "builder", "~> 3.0"
+gem "haml", "~> 5.2"
 gem "middleman", "~> 4.2"
 gem "middleman-autoprefixer", "~> 3.0"
 gem "middleman-blog", "~> 4.0"
